@@ -1,0 +1,69 @@
+{
+  "name": "fidisys-design-system-react",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ],
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": true
+        }
+      ]
+    ]
+  },
+  "peerDependencies": {
+    "antd": "^2.13.4"
+  },
+  "scripts": {
+    "start": "start-storybook -p 9000 -s public",
+    "build": "babel src -d lib --copy-files",
+    "storybook": "start-storybook -p 9000 -s public",
+    "build-storybook": "build-storybook -s public",
+    "prepublishOnly": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "antd": "^2.13.4",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.12.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "css-loader": "^3.1.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "react": "^16.8.5",
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.3.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react-router-dom": "^5.1.2"
+  }
+}
