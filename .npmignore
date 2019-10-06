@@ -1,8 +1,0 @@
-/node_modules
-
-.storybook
-.env
-.gitignore
-package-lock.json
-storybook-static
-src
